@@ -1,5 +1,6 @@
-import express from "express";
-import cors from "cors";
+const express = require("express") ;
+const {sequelize} = require("./models/index.js");
+const cors = require("cors");
 
 const app = express();
 const PORT = 5000;
@@ -11,10 +12,11 @@ app.get("/", (req, res) => {
     { success: true, data: "hello world!" },
     { success: true, data: "hello cormac" },
     { success: true, data: "another one" },
-    { success: true, data: "last one" },
+    { success: true, data: "last oe" },
   ]);
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
+  await sequelize.sync();
   console.log(`*** Server listening on port ${PORT} ***`);
 });
