@@ -1,0 +1,103 @@
+nav {
+  background-color: rgb(35, 35, 35);
+  color: white;
+}
+
+li {
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 3rem;
+  width: 100%;
+}
+
+.brandTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 100%;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.navLinks {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  height: 100%;
+  margin: 0;
+}
+
+.navLinks li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+  margin: 0;
+}
+
+.toggleButton {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 2rem;
+  width: 2.5rem;
+}
+
+.toggleButton:hover {
+  cursor: pointer;
+}
+
+.bar {
+  height: 4px;
+  width: 2.5rem;
+  background-color: white;
+}
+
+.dropDownLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropDownLinks li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .navLinks {
+    display: flex;
+  }
+
+  .toggleButton {
+    display: none;
+  }
+}
+
+/* Disable hover on mobile devices */
+@media (hover: hover) {  
+    li:hover {
+        background-color: rgb(54, 54, 54);
+    }
+  }

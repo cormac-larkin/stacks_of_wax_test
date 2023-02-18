@@ -22,10 +22,10 @@ module.exports = (sequelize, DataTypes) => {
       last_name: DataTypes.STRING,
       email: DataTypes.STRING,
       password_hash: DataTypes.STRING,
-      date_of_birth: DataTypes.DATE,
+      date_of_birth: DataTypes.DATEONLY,
       profile_pic_url: DataTypes.STRING,
-      join_date: DataTypes.DATE,
-      last_login: DataTypes.DATE,
+      join_date: DataTypes.DATEONLY,
+      last_login: DataTypes.DATEONLY,
       country_id: {
         type: DataTypes.INTEGER,
         references: {

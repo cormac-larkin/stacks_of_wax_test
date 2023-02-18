@@ -3,6 +3,6 @@ const ensureAuthenticated = (req, res, next) => {
     return next();
   }
   return res.status(401);
-}
+};
 
 module.exports = { ensureAuthenticated };
